@@ -1,0 +1,113 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* SCROLLBAR (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #111;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#c79cf6, #93b7f6);
+    border-radius: 10px;
+}
+body.scrolled::-webkit-scrollbar-thumb {
+    background: linear-gradient(#ff512f, #dd2476);
+}
+/* BODY */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+}
+/* NAVBAR */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 0;
+    background: linear-gradient(90deg, #7c4cb0, #5174b2);
+    transition: 0.4s;
+    z-index: 1000;
+}
+/* Navbar on scroll */
+#navbar.scrolled {
+    background: linear-gradient(90deg, #ff512f, #dd2476);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+/* MENU */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.nav-menu li {
+    margin: 0 25px;
+}
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    transition: 0.3s;
+}
+/* Hover effect */
+.nav-menu a:hover {
+    color: #00ffd5;
+}
+/* Active */
+.nav-menu a.active {
+    color: #00ffd5;
+}
+/* SECTION */
+.page-section {
+    height: 200vh; /* Enables scrolling */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* OVERLAY */
+.overlay {
+    background: rgba(40, 39, 39, 0.6);
+    padding: 50px;
+    text-align: center;
+    animation: fadeUp 1.2s ease;
+}
+/* TEXT */
+.overlay h1 {
+    font-size: 48px;
+}
+.overlay p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+/* BACKGROUND IMAGES */
+.home-bg {
+    background-image: url("images/home.jpg");
+}
+.about-bg {
+    background-image: url("images/about.jpg");
+}
+.services-bg {
+    background-image: url("images/services.jpg");
+}
+.contact-bg {
+    background-image: url("images/contact.jpg");
+}
+/* ANIMATION */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
